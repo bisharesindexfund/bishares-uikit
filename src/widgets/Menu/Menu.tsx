@@ -75,7 +75,7 @@ const Menu: React.FC<NavProps> = ({
 }) => {
   const { isXl } = useMatchBreakpoints();
   const isMobile = isXl === false;
-  const [isPushed, setIsPushed] = useState(!isMobile);
+  const [isPushed, setIsPushed] = useState(false);
   const [showMenu, setShowMenu] = useState(true);
   const refPrevOffset = useRef(window.pageYOffset);
 
@@ -126,7 +126,7 @@ const Menu: React.FC<NavProps> = ({
         </Flex>
       </StyledNav>
       <BodyWrapper>
-        <Panel
+        {/* <Panel
           isPushed={isPushed}
           isMobile={isMobile}
           showMenu={showMenu}
@@ -139,7 +139,7 @@ const Menu: React.FC<NavProps> = ({
           pushNav={setIsPushed}
           links={links}
           priceLink={priceLink}
-        />
+        /> */}
         <Inner isPushed={isPushed} showMenu={showMenu}>
           {children}
         </Inner>
